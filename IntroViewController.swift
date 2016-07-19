@@ -22,21 +22,6 @@ class IntroViewController: UIViewController {
     
     @IBAction func connectToFacebook(sender: AnyObject) {
         
-        /* Does the actual login with UI */
-        
-        login.setFirebaseURL("https://sizzling-heat-9137.firebaseio.com/")
-        login.setFBPermission(["email", "public_profile", "user_birthday"])
-        
-        login.loginFromViewController(self, completion: {
-            (firebaseError, facebookError, authData) in
-            if firebaseError != nil {
-                print("Firebase error: \(firebaseError!)")
-            } else if facebookError != nil {
-                print("Facebook error: \(facebookError!)")
-            } else {
-                self.dismissViewControllerAnimated(true, completion: nil)
-            }
-        })
     }
 }
 
