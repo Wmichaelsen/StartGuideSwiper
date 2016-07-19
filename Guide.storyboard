@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="RRH-Iw-8NB">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Effra.otf">
+            <string>Effra-Regular</string>
+            <string>Effra-Regular</string>
+            <string>Effra-Regular</string>
+        </mutableArray>
+    </customFonts>
+    <scenes>
+        <!--Intro View Controller-->
+        <scene sceneID="2g3-sR-Jvc">
+            <objects>
+                <viewController id="RRH-Iw-8NB" customClass="IntroViewController" customModule="Looking4friends" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HwU-zG-SQS"/>
+                        <viewControllerLayoutGuide type="bottom" id="WSy-Xf-2zs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5Kt-tN-Aq9">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.25" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="quickguide-background" highlightedImage="quickguide-background" translatesAutoresizingMaskIntoConstraints="NO" id="2if-En-DgY">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="0QW-9o-09t">
+                                <rect key="frame" x="281" y="450" width="39" height="37"/>
+                                <color key="pageIndicatorTintColor" red="0.44313725490196076" green="0.84705882352941175" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="currentPageIndicatorTintColor" red="0.0" green="0.72549019607843135" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </pageControl>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k5s-Of-8aM">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <connections>
+                                    <segue destination="ksB-Bl-TlF" kind="embed" id="b2Z-ji-Uhf"/>
+                                </connections>
+                            </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RBe-WY-iGO">
+                                <rect key="frame" x="136" y="497" width="329" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="IQj-Gv-JQA"/>
+                                    <constraint firstAttribute="width" constant="329" id="XsA-B7-eKJ"/>
+                                </constraints>
+                                <state key="normal" image="rectangle1" backgroundImage="rectangle1">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted" image="rectangle1" backgroundImage="rectangle1"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="10"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="connectToFacebook:" destination="RRH-Iw-8NB" eventType="touchUpInside" id="o0x-qy-SY6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2if-En-DgY" firstAttribute="leading" secondItem="5Kt-tN-Aq9" secondAttribute="leadingMargin" constant="-20" id="9UM-YZ-2pf"/>
+                            <constraint firstItem="RBe-WY-iGO" firstAttribute="centerX" secondItem="k5s-Of-8aM" secondAttribute="centerX" id="C1Z-iL-zNg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="k5s-Of-8aM" secondAttribute="trailing" constant="-20" id="Jse-Fd-gdX"/>
+                            <constraint firstItem="WSy-Xf-2zs" firstAttribute="top" secondItem="k5s-Of-8aM" secondAttribute="bottom" id="LFt-0I-0r0"/>
+                            <constraint firstItem="2if-En-DgY" firstAttribute="top" secondItem="5Kt-tN-Aq9" secondAttribute="topMargin" id="NTI-7C-vsE"/>
+                            <constraint firstItem="WSy-Xf-2zs" firstAttribute="top" secondItem="2if-En-DgY" secondAttribute="bottom" id="NkJ-vx-E9e"/>
+                            <constraint firstItem="RBe-WY-iGO" firstAttribute="top" secondItem="0QW-9o-09t" secondAttribute="bottom" constant="10" id="a5l-nl-aL6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2if-En-DgY" secondAttribute="trailing" constant="-20" id="h6i-tO-h7Q"/>
+                            <constraint firstItem="0QW-9o-09t" firstAttribute="top" secondItem="k5s-Of-8aM" secondAttribute="bottom" constant="-150" id="lW3-fy-3ge"/>
+                            <constraint firstItem="k5s-Of-8aM" firstAttribute="leading" secondItem="5Kt-tN-Aq9" secondAttribute="leadingMargin" constant="-20" id="mdV-gO-pov"/>
+                            <constraint firstItem="k5s-Of-8aM" firstAttribute="top" secondItem="HwU-zG-SQS" secondAttribute="bottom" constant="-20" id="nHH-ay-ldR"/>
+                            <constraint firstItem="0QW-9o-09t" firstAttribute="centerX" secondItem="k5s-Of-8aM" secondAttribute="centerX" id="usi-O6-G91"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="containerView" destination="k5s-Of-8aM" id="lke-n1-h1f"/>
+                        <outlet property="pageControl" destination="0QW-9o-09t" id="Ou4-8o-YTc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OAe-tU-LcZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-223" y="-1003"/>
+        </scene>
+        <!--Intro Page View Controller-->
+        <scene sceneID="AMd-Fu-dTF">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="ksB-Bl-TlF" customClass="IntroPageViewController" customModule="Looking4friends" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fRi-UN-NUn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="413" y="-956"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="mtt-KV-6kV">
+            <objects>
+                <viewController storyboardIdentifier="page1" useStoryboardIdentifierAsRestorationIdentifier="YES" id="kpA-dc-f48" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AYx-EL-J1I"/>
+                        <viewControllerLayoutGuide type="bottom" id="IWG-bb-Alc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GEI-gd-SAe">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="screen1-main (1)" highlightedImage="screen1-main (1)" translatesAutoresizingMaskIntoConstraints="NO" id="lrY-Jx-kz2">
+                                <rect key="frame" x="139" y="38" width="323" height="291"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="291" id="LPT-89-yIY"/>
+                                    <constraint firstAttribute="width" constant="323" id="sND-Gp-sUb"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose your interests" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iDv-Of-p7z">
+                                <rect key="frame" x="195" y="387" width="211" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="211" id="D78-e4-CIe"/>
+                                    <constraint firstAttribute="height" constant="27" id="Z7Q-Oe-3GN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Effra-Regular" family="Effra" pointSize="22"/>
+                                <color key="textColor" red="0.0" green="0.72549019609999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="IWG-bb-Alc" firstAttribute="top" secondItem="iDv-Of-p7z" secondAttribute="bottom" constant="186" id="Ejb-AR-PFG"/>
+                            <constraint firstItem="iDv-Of-p7z" firstAttribute="top" secondItem="lrY-Jx-kz2" secondAttribute="bottom" constant="58" id="F4u-HZ-Qj3"/>
+                            <constraint firstItem="iDv-Of-p7z" firstAttribute="centerX" secondItem="GEI-gd-SAe" secondAttribute="centerX" id="dHH-Dh-nHq"/>
+                            <constraint firstItem="lrY-Jx-kz2" firstAttribute="centerX" secondItem="GEI-gd-SAe" secondAttribute="centerX" id="xad-IQ-GCA"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ukQ-O7-YBy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-913" y="-123"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="w7O-0F-5gj">
+            <objects>
+                <viewController storyboardIdentifier="page2" useStoryboardIdentifierAsRestorationIdentifier="YES" id="oHL-Ja-9tX" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WWK-hb-cm5"/>
+                        <viewControllerLayoutGuide type="bottom" id="mc2-xQ-x3f"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lTy-Hx-icu">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="screen2-main" highlightedImage="screen2-main" translatesAutoresizingMaskIntoConstraints="NO" id="7cr-KK-qL9">
+                                <rect key="frame" x="154" y="38" width="293" height="314"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="293" id="TOc-Jw-nyq"/>
+                                    <constraint firstAttribute="height" constant="314" id="YmT-dN-6jp"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find people with similar interests nearby" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jqN-MI-G6m">
+                                <rect key="frame" x="182" y="387" width="237" height="61"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="237" id="Kws-BG-JPZ"/>
+                                    <constraint firstAttribute="height" constant="61" id="fbW-rd-YVw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Effra-Regular" family="Effra" pointSize="22"/>
+                                <color key="textColor" red="0.0" green="0.72549019609999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="jqN-MI-G6m" firstAttribute="top" secondItem="7cr-KK-qL9" secondAttribute="bottom" constant="35" id="6Nl-Hw-uzu"/>
+                            <constraint firstItem="7cr-KK-qL9" firstAttribute="centerX" secondItem="lTy-Hx-icu" secondAttribute="centerX" id="FDg-yU-Gzy"/>
+                            <constraint firstItem="jqN-MI-G6m" firstAttribute="centerX" secondItem="lTy-Hx-icu" secondAttribute="centerX" id="Gts-Gz-6Od"/>
+                            <constraint firstItem="mc2-xQ-x3f" firstAttribute="top" secondItem="jqN-MI-G6m" secondAttribute="bottom" constant="152" id="Ooh-Xm-4eg"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jtU-ZH-JiP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-272" y="-123"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Ugn-JV-rOn">
+            <objects>
+                <viewController storyboardIdentifier="page3" useStoryboardIdentifierAsRestorationIdentifier="YES" id="VLZ-Ht-BzN" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ds1-bi-h1X"/>
+                        <viewControllerLayoutGuide type="bottom" id="j4u-6R-4bI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="M7n-LG-vC1">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="group6" highlightedImage="group6" translatesAutoresizingMaskIntoConstraints="NO" id="sYM-Is-5On">
+                                <rect key="frame" x="137" y="38" width="327" height="329"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="329" id="8m0-bW-FaM"/>
+                                    <constraint firstAttribute="width" constant="327" id="x0m-EP-mBA"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chat and create new firendships!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o9O-VG-Xug">
+                                <rect key="frame" x="182" y="387" width="237" height="61"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="237" id="PDQ-de-ktr"/>
+                                    <constraint firstAttribute="height" constant="61" id="eYu-lt-Aqj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Effra-Regular" family="Effra" pointSize="22"/>
+                                <color key="textColor" red="0.0" green="0.72549019609999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="o9O-VG-Xug" firstAttribute="top" secondItem="sYM-Is-5On" secondAttribute="bottom" constant="20" id="D8t-nh-RPZ"/>
+                            <constraint firstItem="sYM-Is-5On" firstAttribute="centerX" secondItem="M7n-LG-vC1" secondAttribute="centerX" id="uhd-nR-uxJ"/>
+                            <constraint firstItem="j4u-6R-4bI" firstAttribute="top" secondItem="o9O-VG-Xug" secondAttribute="bottom" constant="152" id="vL2-Du-5jD"/>
+                            <constraint firstItem="o9O-VG-Xug" firstAttribute="centerX" secondItem="M7n-LG-vC1" secondAttribute="centerX" id="wzX-RV-jwh"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nEa-xD-cWX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="392" y="-123"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="group6" width="310" height="305"/>
+        <image name="quickguide-background" width="375" height="667"/>
+        <image name="rectangle1" width="329" height="49"/>
+        <image name="screen1-main (1)" width="323" height="291"/>
+        <image name="screen2-main" width="293" height="314"/>
+    </resources>
+</document>
